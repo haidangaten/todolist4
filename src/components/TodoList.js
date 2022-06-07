@@ -25,7 +25,7 @@ function TodoList(props) {
                 <div className="input-group" key={todo.id}>
                     <input type="text" 
                      value={todo.title} 
-                     className='form-control'                 
+                     className={`form-control ${todo.completed?"complete":""}`}    //'form-control'                 
                     onChange={(e)=>e.preventDefault()}  />
                     <div className="input-group-append">
                     <button className="btn btn-success" type="button" onClick={()=>handleCompleteClick(todo)}>
